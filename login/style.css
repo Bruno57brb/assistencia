@@ -1,0 +1,110 @@
+/* Importa a fonte Poppins do Google Fonts com diferentes pesos */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* Reset de estilos para todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  background: linear-gradient(to right, #ffffffff, #ffffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+form {
+  border-radius: 5%;
+  padding: 10px;
+  width: 20%;
+  position: relative;
+  top: -20%;
+  /* box-shadow:  0 5px 15px black; */
+}
+
+input {
+  margin: 2px auto;
+  display: block;
+  border-color: black;
+  border-radius: 50px;
+  padding: 5px;
+}
+
+label {
+  font-size: 16px;
+  position: relative;
+}
+
+header {
+  background-color: #ffffff;
+  width: 100%;
+  height: 15%;
+  border-radius: 20px; /* Corrigido */
+  top: -30%;
+  position: relative;
+}
+
+footer {
+  background: linear-gradient(to right, #006f3c, #009b53);
+  width: 100%;
+  height: 15%;
+  border-radius: 00px;
+  top: 1%;
+  position: relative;
+  z-index: 1; /* Garante que o footer esteja atrás da imagem */
+  box-shadow: 0 5px 15px black;
+}
+#olho {
+  height: 20px;
+  width: 20px;
+  position: relative;
+  left: 70px;
+  top: 43.2%;
+  z-index: 2;
+}
+
+.iff {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); /* Sombra leve */
+  background-color: white; /* Fundo branco */
+  border: 5px solid #006f3c; /* Borda verde escura semelhante ao logo */
+  border-radius: 10px; /* Bordas arredondadas */
+  padding: 20px; /* Espaço interno */
+  position: relative;
+  top: 48%; /* Ajuste da posição */
+  width: 130px; /* Largura ajustável */
+  height: 130px; /* Altura ajustável */
+  left: 30%;
+  z-index: 2;
+  transform: rotate(45deg); /* Rotaciona 45 graus */
+}
+.iff img {
+  transform: rotate(-45deg); /* Inverte a rotação para manter a imagem normal */
+  width: auto; /* Ajuste o tamanho conforme necessário */
+  height: 90px; /* Mantém a proporção da imagem */
+  left: 15%;
+  position: relative;
+}
+button{
+  background-color: #006f3c;
+  border-radius: 5px;
+  position: relative;
+  border: none;
+  margin: 20px auto;
+  padding: 5px;
+  color: white;
+  height: 50px;
+  width: 100px;
+  left: 30%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+button:hover{
+  background-color: #009b53;
+  transition: 0.5s;
+}
