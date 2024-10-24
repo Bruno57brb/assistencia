@@ -19,18 +19,48 @@ if (isset($_SESSION['login'])) {
   <link rel="stylesheet" href="css/style.css">
   <title>Painel de Administração</title>
 </head>
+
 <?php include_once "header.php"; ?>
+
 <style>
-  .btn-large {
-    min-width: 200px;
-    min-height: 100px;
-    /* Adjust button width */
-    padding: 16px;
-    /* Increase padding for larger button */
+  .card-content i {
+    font-size: 48px;
+    color: white;
   }
 
-  .button-spacing {
-    margin-bottom: 20px;
+  .card-content h5 {
+    margin-top: 0;
+    color: white;
+  }
+
+  .card-action {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .card-action {
+  text-align: center;
+  padding-bottom: 10px;
+  transition: all 0.3s ease; /* Transição suave */
+}
+
+.card-action:hover {
+  transform: translateY(-5px); /* Levanta o card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais forte */
+  background-color: none; /* Remove o fundo preto */
+}
+
+.custom-card {
+  transition: all 0.3s ease; /* Transição suave para o card */
+}
+
+.custom-card:hover {
+  transform: scale(1.05); /* Aumenta levemente o card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra mais visível */
+}
+
+
+  .custom-card {
+    height: 200px;
   }
 </style>
 
@@ -38,32 +68,85 @@ if (isset($_SESSION['login'])) {
   <div class="container center-align">
     <h1>Bem-vindo ao Painel de Administração do IFFar</h1>
     <div class="row">
-      <?php if($_SESSION['Perfil'] == 1 or $_SESSION['Perfil'] == 2){ ?>
-      <div class="col s12 m6 l4 button-spacing">
-        <button class="waves-effect waves-light btn blue darken-2 btn-large">Entrada</button>
+      <?php if ($_SESSION['Perfil'] == 1 or $_SESSION['Perfil'] == 2) { ?>
+        <div class="col s12 m6 l4">
+          <div class="card blue darken-2 custom-card">
+            <div class="card-content white-text">
+              <i class="fas fa-sign-in-alt"></i>
+              <h5>Entrada</h5>
+            </div>
+            <div class="card-action">
+              <a href="#" class="white-text">Acessar</a>
+            </div>
+          </div>
+        </div>
+      <?php } ?>
+
+      <div class="col s12 m6 l4">
+        <div class="card pink darken-2 custom-card">
+          <div class="card-content white-text">
+            <i class="fas fa-sign-out-alt"></i>
+            <h5>Saída</h5>
+          </div>
+          <div class="card-action">
+            <a href="#" class="white-text">Acessar</a>
+          </div>
+        </div>
       </div>
-    <?php } ?>
-      <div class="col s12 m6 l4 button-spacing">
-        <button class="waves-effect waves-light btn pink darken-2 btn-large">Saída</button>
+
+      <div class="col s12 m6 l4">
+        <div class="card orange darken-2 custom-card">
+          <div class="card-content white-text">
+            <i class="fas fa-file-alt"></i>
+            <h5>Relatório</h5>
+          </div>
+          <div class="card-action">
+            <a href="#" class="white-text">Acessar</a>
+          </div>
+        </div>
       </div>
-      <div class="col s12 m6 l4 button-spacing">
-        <button class="waves-effect waves-light btn orange darken-2 btn-large">Relatório</button>
+
+      <div class="col s12 m6 l4">
+        <div class="card grey darken-2 custom-card">
+          <div class="card-content white-text">
+            <i class="fas fa-calendar-alt"></i>
+            <h5>Agendamentos</h5>
+          </div>
+          <div class="card-action">
+            <a href="#" class="white-text">Acessar</a>
+          </div>
+        </div>
       </div>
-      <div class="col s12 m6 l4 button-spacing">
-        <button class="waves-effect waves-light btn grey darken-2 btn-large">Agendamentos</button>
+
+      <div class="col s12 m6 l4">
+        <div class="card green darken-2 custom-card">
+          <div class="card-content white-text">
+            <i class="fas fa-user-graduate"></i>
+            <h5>Alunos</h5>
+          </div>
+          <div class="card-action">
+            <a href="#" class="white-text">Acessar</a>
+          </div>
+        </div>
       </div>
-      <div class="col s12 m6 l4 button-spacing">
-        <button class="waves-effect waves-light btn green darken-2 btn-large">Alunos</button>
-      </div>
-      <div class="col s12 m6 l4 button-spacing">
-        <button class="waves-effect waves-light btn cyan darken-2 btn-large">Consulta</button>
+
+      <div class="col s12 m6 l4">
+        <div class="card cyan darken-2 custom-card">
+          <div class="card-content white-text">
+            <i class="fas fa-search"></i>
+            <h5>Consulta</h5>
+          </div>
+          <div class="card-action">
+            <a href="#" class="white-text">Acessar</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-
 </body>
 
 </html>
+
 <script>
   <?php if ($login != "") { ?>
     window.addEventListener("load", (event) => {

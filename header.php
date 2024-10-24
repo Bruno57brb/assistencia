@@ -25,8 +25,7 @@ mysqli_close($conexao);
     <!-- Nome do usuário e imagem -->
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li>
-        <span><?= $row['nome']; ?></span>
-        <img class="circle responsive-img" src="img/bruno.png" alt="User Logo" width="40px" height="auto">
+
       </li>
     </ul>
   </div>
@@ -36,7 +35,7 @@ mysqli_close($conexao);
 <nav id="sidebar">
   <div class="navbar">
     <div class="logo">
-      <img src="img/bruno.png" alt="Logo">
+      <img src="img/iff.jpg" alt="Logo">
       <h1><?php echo $row['nome']; ?></h1>
     </div>
     <ul>
@@ -146,25 +145,11 @@ mysqli_close($conexao);
   }
 
   .logout {
-    position: absolute;
-    bottom: 20px;
+    padding: 0 20px;
     width: 100%;
   }
 
-  .logout a {
-    color: rgb(255, 99, 71);
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-
-  .logout a:hover {
-    background-color: #444;
-    color: white;
-  }
+ 
 </style>
 
 <script>
